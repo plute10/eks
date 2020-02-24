@@ -9,7 +9,7 @@ Parameters:
   EksClusterName:
     Type: String
     Description: The name of the EKS cluster created
-    Default: 
+    Default: eksctl-simple-jwt-api-cluster
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
@@ -17,7 +17,7 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: 
+    Default: eks
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
@@ -40,13 +40,13 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default:
+    Default: plute10
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub username or organization
 
-  CodeBuildDockerImage:
+  CodeBuildDockerImage: 
     Type: String
     Default: aws/codebuild/docker:17.09.0
     Description: Default AWS CodeBuild Docker optimized image
@@ -56,7 +56,7 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: 
+    Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
